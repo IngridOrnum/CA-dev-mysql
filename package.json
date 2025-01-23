@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "tailwind": "npx tailwindcss -i ./src/css/input.css -o ./public/css/styles.css --watch"
+    "dev": "node --watch --env-file=.env server.js",
+    "tailwind": "npx tailwindcss -i frontend/styles/input.css -o frontend/styles/styles.css --watch"
   },
   "repository": {
     "type": "git",
