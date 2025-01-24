@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <script src="addArtist.js" type="module" defer></script>
+    <title>TT - Add Artist</title>
+</head>
+<body>
+    <nav class="flex justify-between p-2">
+        <div class="logo">
+            <span>TT</span>
+            <span>Tune Tracker</span>
+        </div>
+        <div class="flex gap-6">
+            <span><a href="../home/index.html">Home</a></span>
+            <span><a href="../admin/index.html">Admin</a></span>
+        </div>
+    </nav>
+    <main>
+        <form class="add-artist-form">
+            <div class="flex flex-col">
+                <label for="name">Name</label>
+                <input class="border border-slate-900" type="text" id="name">
+            </div>
+            <div class="flex flex-col">
+                <label for="genre">Genre</label>
+                <input class="border border-slate-900" type="text" id="genre">
+            </div>
+            <div class="flex flex-col">
+                <label for="img-url">Image Url</label>
+                <input class="border border-slate-900" type="text" id="img-url">
+            </div>
+            <div class="flex flex-col">
+                <label for="bio">Bio</label>
+                <textarea class="border border-slate-900" type="text" id="bio"></textarea>
+            </div>
+            <button type="submit">Add New Artist</button>
+        </form>
+    </main>
+</body>
+</html>
