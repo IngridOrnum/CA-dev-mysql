@@ -2,7 +2,7 @@ import {API_ENDPOINTS} from "../../../api/api.js";
 
 async function loadArtists () {
     try {
-        const response = fetch(API_ENDPOINTS.ARTIST);
+        const response = await fetch(API_ENDPOINTS.ARTIST);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
