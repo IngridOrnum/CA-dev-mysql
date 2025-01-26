@@ -21,7 +21,17 @@ app.use(express.json());
 app.get("/artists", async (req, res) => {
     try {
         const [artists] = await connection.query(`SELECT * FROM artist ORDER BY id DESC`);
-        res.json(artists);  // This will automatically set Content-Type to application/json
+        res.json(artists);
+    } catch (error) {
+        console.error('Server error:', error.message);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.get("/albums", async (req, res) => {
+    try {
+        const [albums] = await connection.query(`SELECT * FROM album ORDER BY id DESC`);
+        res.json(albums);
     } catch (error) {
         console.error('Server error:', error.message);
         res.status(500).json({ error: error.message });

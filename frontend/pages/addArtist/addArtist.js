@@ -21,6 +21,14 @@ document.querySelector('.add-artist-form').addEventListener("submit", async (e) 
         },
         body: JSON.stringify(body),
     });
+    if (res.ok) {
+        const data = await  res.json();
+        console.log(data);
+        alert('Artist added successfully!');
+        window.location.reload();
+    } else {
+        throw new Error('Failed to create artist');
+    }
     const data = await res.json();
     console.log(data);
 });
