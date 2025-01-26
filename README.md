@@ -4,10 +4,9 @@
 A Node.js API built with Express and MySQL designed to manage artist and album data. This API allows users to create artist profiles and albums associated with each artist. All data can be viewed on the homepage of the associated frontend application.
 
 ## Features
-- Create and manage artist profiles.
+- Create artist profiles.
 - Add albums to specific artists.
 - View all artists and albums on the homepage.
-- CORS enabled for cross-origin requests.
 - Environment variables managed through `dotenv`.
 - Real-time development feedback with `nodemon`.
 - Integrated Tailwind CSS for frontend styling needs.
@@ -22,9 +21,6 @@ Before you begin, ensure you have the following installed:
 Clone the repository:
 git clone https://github.com/IngridOrnum/CA-dev-mysql.git
 cd CA-dev-mysql
-
-### Install required dependencies
-- npm install
 
 ## Configuration
 Create a .env file in the root directory of the project and update the following environment variables according to your setup:
