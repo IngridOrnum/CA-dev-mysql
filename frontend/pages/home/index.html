@@ -2,44 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <script defer src="../../js/script.js" type="module"></script>
     <script defer src="home.js" type="module"></script>
     <link href="../../styles/styles.css" rel="stylesheet">
     <title>Home</title>
 </head>
-<body>
-    <nav class="flex justify-between p-2">
-        <div class="logo">
-            <span>TT</span>
-            <span>Tune Tracker</span>
+<body class="bg-primary text-primary-white m-6">
+    <nav class="flex justify-between">
+        <div class="logo cursor-pointer">
+            <a href="#">
+                <span class="p-2 border border-secondary-gray text-light-purple">TT</span>
+                <span class="p-2 border border-secondary-gray ">Tune Tracker</span>
+            </a>
         </div>
-        <div class="flex gap-6">
-            <span><a href="#">Home</a></span>
-            <span><a href="../admin">Admin</a></span>
+        <div class="flex gap-2">
+            <span class="p-2 border border-secondary-gray hover:bg-secondary-gray hover:text-dark-purple cursor-pointer"><a
+                    href="#">Home</a></span>
+            <span class="p-2 border border-secondary-gray"><a href="../admin">Admin</a></span>
         </div>
     </nav>
-    <main>
-        <section>
-            <h2>Lastest Artists</h2>
+    <main class="mt-12">
+        <section class="flex flex-col items-center gap-6">
+            <h2 class="font-medium text-2xl uppercase">Lastest Artists</h2>
             <div class="latest-container flex gap-6"></div>
         </section>
-        <section>
-            <h2>Browse By Genre</h2>
-            <div>
-                <h3>Rock</h3>
-                <div class="genre-container rock-container"></div>
+        <section class="flex flex-col mt-12">
+            <div class="flex flex-col items-center justify-center align-middle uppercase text-2xl font-medium">
+                <h2>Browse By Genre</h2>
             </div>
             <div>
-                <h3>Indie</h3>
-                <div class="genre-container indie-container"></div>
-            </div>
-            <div>
-                <h3>Pop</h3>
-                <div class="genre-container indie-container"></div>
-            </div>
-            <div>
-                <h3>Classic</h3>
-                <div class="genre-container indie-container"></div>
+                <div>
+                    <h3>Rock</h3>
+                    <div class="genre-container rock-container"></div>
+                </div>
+                <div>
+                    <h3>Indie</h3>
+                    <div class="genre-container indie-container"></div>
+                </div>
+                <div>
+                    <h3>Pop</h3>
+                    <div class="genre-container indie-container"></div>
+                </div>
+                <div>
+                    <h3>Classic</h3>
+                    <div class="genre-container indie-container"></div>
+                </div>
             </div>
         </section>
     </main>

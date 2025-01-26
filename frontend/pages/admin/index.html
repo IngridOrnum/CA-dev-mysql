@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="stylesheet" href="../../styles/styles.css">
     <script src="admin.js" defer></script>
     <title>TT - Admin</title>
 </head>
-<body>
-    <nav class="flex justify-between p-2">
-        <div class="logo">
-            <span>TT</span>
-            <span>Tune Tracker</span>
+<body class="bg-primary text-primary-white m-6">
+    <nav class="flex justify-between">
+        <div class="logo cursor-pointer">
+            <a href="../home/">
+                <span class="p-2 border border-secondary-gray text-light-purple">TT</span>
+                <span class="p-2 border border-secondary-gray ">Tune Tracker</span>
+            </a>
         </div>
-        <div class="flex gap-6">
-            <span><a href="../home/index.html">Home</a></span>
-            <span><a href="#">Admin</a></span>
+        <div class="flex gap-2">
+            <span class="p-2 border border-secondary-gray hover:bg-primary-white hover:text-primary-black cursor-pointer"><a href="../home/">Home</a></span>
+            <span class="p-2 border border-secondary-gray hover:bg-primary-white hover:text-primary-black cursor-pointer"><a href="../admin">Admin</a></span>
         </div>
     </nav>
-    <main class="items-center flex flex-col gap-6">
-        <button class="border border-slate-900"><a href="../addArtist/index.html">Add New Artist</a></button>
-        <button class="border border-slate-900"><a href="../addAlbum/index.html">Add New Album</a></button>
+    <main class="items-center flex flex-col gap-6 mt-20">
+        <h1 class="text-4xl mb-8">Welcome, Admin</h1>
+        <button class="border border-secondary-gray p-2 hover:bg-primary-white hover:text-primary-black w-[135px]"><a href="../addArtist/">Add New Artist</a></button>
+        <button class="border border-secondary-gray p-2 hover:bg-primary-white hover:text-primary-black w-[135px]"><a href="../addAlbum/">Add New Album</a></button>
     </main>
 </body>
 </html>
