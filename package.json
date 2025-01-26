@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "dev": "node --watch --env-file=.env server.js",
     "tailwind": "npx tailwindcss -i frontend/styles/input.css -o frontend/styles/styles.css --watch"
   },

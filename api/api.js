@@ -1,5 +1,5 @@
 // const API_BASE_URL = 'ERSTATT LOCALHOST MED FAKTISK SIDE';
-export const API_BASE_URL = 'http://localhost:5050';
+export const API_BASE_URL = 'https://ca-dev-mysql.onrender.com';
 
 // Artist Endpoints
 export const API_ENDPOINTS = {

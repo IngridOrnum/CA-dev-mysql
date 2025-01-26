@@ -1,6 +1,8 @@
 import mysql from 'mysql2/promise';
 import express from "express";
 import cors from "cors";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const connection = await mysql.createConnection({
     host: process.env.DB_HOST,
