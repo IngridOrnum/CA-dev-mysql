@@ -2,40 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="stylesheet" href="../../styles/styles.css">
     <script src="addAlbum.js" type="module" defer></script>
     <title>TT - Add Album</title>
 </head>
-<body>
-    <nav class="flex justify-between p-2">
-        <div class="logo">
-            <span>TT</span>
-            <span>Tune Tracker</span>
+<body class="bg-primary text-primary-white m-6">
+    <nav class="flex justify-between">
+        <div class="logo cursor-pointer">
+            <a href="../home/">
+                <span class="p-2 border border-secondary-gray text-light-purple">TT</span>
+                <span class="p-2 border border-secondary-gray ">Tune Tracker</span>
+            </a>
         </div>
-        <div class="flex gap-6">
-            <span><a href="../home/index.html">Home</a></span>
-            <span><a href="../admin/index.html">Admin</a></span>
+        <div class="flex gap-2">
+            <span class="p-2 border border-secondary-gray hover:bg-secondary-gray hover:text-dark-purple cursor-pointer"><a href="../home/">Home</a></span>
+            <span class="p-2 border border-secondary-gray"><a href="../admin">Admin</a></span>
         </div>
     </nav>
-    <main>
-        <form class="add-album-form">
-            <div class="flex flex-col">
+    <main class="flex flex-col items-center">
+        <h1 class="text-4xl mt-20">Add New Album</h1>
+        <form class="add-album-form flex flex-col items-center w-96 mt-14 gap-4">
+            <div class="flex flex-col w-full">
                 <label for="artist_id">Select Artist</label>
-                <select class="border border-slate-900" id="artist_id"></select>
+                <select class="cursor-pointer border border-slate-900 text-primary-black p-2" id="artist_id"></select>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col w-full">
                 <label for="title">Title</label>
-                <input class="border border-slate-900" type="text" id="title">
+                <input class="border border-slate-900 text-primary-black p-2" type="text" id="title">
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col w-full">
                 <label for="released">Released</label>
-                <input class="border border-slate-900" type="text" id="released">
+                <input class="border border-slate-900 text-primary-black p-2" type="text" id="released">
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col w-full">
                 <label for="img-url">Image Url</label>
-                <input class="border border-slate-900" type="text" id="img-url">
+                <input class="border border-slate-900 text-primary-black p-2" type="text" id="img-url">
             </div>
-            <button type="submit">Add New Album</button>
+            <button class="p-2 border border-secondary-gray hover:bg-secondary-gray hover:text-dark-purple" type="submit">Add New Album</button>
         </form>
     </main>
 </body>

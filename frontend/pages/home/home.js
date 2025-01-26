@@ -15,8 +15,8 @@ async function fetchArtists() {
 
 function createArtistCard(artist) {
     return `
-        <div class="artist-card flex flex-col items-center">
-            <img class="w-72 h-72 object-cover" src="${artist.image_url}" alt="${artist.name}">
+        <div class="artist-card flex flex-col items-center gap-2">
+            <img class="w-52 h-52 object-cover" src="${artist.image_url}" alt="${artist.name}">
             <h3>${artist.name}</h3>
         </div>
     `
