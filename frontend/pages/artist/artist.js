@@ -16,10 +16,10 @@ async function fetchAlbumsForArtist(artistId) {
 
 function createAlbumCard(album) {
     return `
-        <div class="album-card">
+        <div class="album-card flex flex-col items-center gap-2">
             <img src="${album.image_url}" alt="${album.title}" style="width: 100px; height: 100px;">
-            <div>${album.title}</div>
-            <div>Released: ${album.released}</div>
+            <div class="uppercase">${album.title}</div>
+            <div class="text-secondary-gray">Released: ${album.released}</div>
         </div>
     `;
 }
@@ -42,10 +42,10 @@ async function displayArtistAndAlbums () {
     if (artistData.length > 0) {
         const artist = artistData[0];
         const artistHtml = `
-            <div class="artist-detail-card">
-                <img src="${artist.image_url}" alt="${artist.name}" class="w-52 h-52 object-cover">
-                <h2>${artist.name}</h2>
-                <p>${artist.bio}</p>
+            <div class="artist-detail-card flex flex-col items-center">
+                <img src="${artist.image_url}" alt="${artist.name}" class="w-52 h-52 object-cover border border-secondary-gray p-2">
+                <h2 class="text-3xl uppercase my-6">${artist.name}</h2>
+                <p class="text-secondary-gray w-1/2">${artist.bio}</p>
             </div>
         `;
         artistContainer.innerHTML = artistHtml;
