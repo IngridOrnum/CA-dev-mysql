@@ -38,6 +38,44 @@ app.get("/albums", async (req, res) => {
     }
 });
 
+app.get("/albums/:id", async (req, res) => {
+    const artistId = Number(req.params.id);
+    if (!isNaN(artistId)) {
+        try {
+            const [albums] = await connection.query(
+                "SELECT * FROM album WHERE artist_id = ?", [artistId]
+            );
+                res.json(albums);
+        } catch (e) {
+            console.error('Server error:', error.message);
+            res.status(500).json({ error: error.message });
+        }
+    } else {
+        res.status(400).send("Artist ID is not a valid number");
+    }
+});
+
+app.get("/artists/:id", async (req, res) => {
+    const id = Number(req.params.id);
+    if (!isNaN(id)) {
+        try {
+            const [result] = await connection.query(
+                "SELECT * FROM artist WHERE id=?", [id]
+            );
+            if (result.length) {
+                res.json(result);
+            } else {
+                res.send("no user found");
+            }
+        } catch (e) {
+            res.status(500).send("Something went wrong");
+        }
+    } else {
+        res.status(400).send("ID is not a valid number");
+    }
+});
+
+
 app.post("/create_artist", async (req, res) => {
     const { name, genre, image_url, bio } = req.body;
     try {
