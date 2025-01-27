@@ -1,5 +1,4 @@
-// const API_BASE_URL = 'https://ca-dev-mysql.onrender.com';
-export const API_BASE_URL = 'http://localhost:5050';
+const API_BASE_URL = 'https://ca-dev-mysql.onrender.com';
 
 // Artist Endpoints
 export const API_ENDPOINTS = {

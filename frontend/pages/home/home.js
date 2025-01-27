@@ -21,7 +21,7 @@ async function fetchAlbums() {
         }
         return await response.json();
     } catch (error) {
-        console.error('Could not fetch artists:', error);
+        console.error('Could not fetch albums:', error);
         return [];
     }
 }
