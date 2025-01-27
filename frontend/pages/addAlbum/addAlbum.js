@@ -47,10 +47,10 @@ document.querySelector('.add-album-form').addEventListener('submit', async (e) =
     if (res.ok) {
         const data = await  res.json();
         console.log(data);
-        alert('Artist added successfully!');
+        alert('Album added successfully!');
         window.location.reload();
     } else {
-        throw new Error('Failed to create artist');
+        throw new Error('Failed to add album.');
     }
     const data = await res.json();
     console.log(data);
